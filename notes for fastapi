@@ -2,3 +2,6 @@ endpounst is /home type things
 methods get , post , put , delete
 uvicorn app:app --reload   =  chalu karta hai and automatically refresh karte rehta hai when update is there in app
 import Path  helps to add more details , constraints
+from pydantic import BaseModel
+
+class Item(BaseModel):   // refers to the type of data we need from user in order to to run the post method (we can call it mandatory format)
