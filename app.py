@@ -15,7 +15,7 @@ def get_item(item_id: int = Path( description = "the id of the item you want to 
 
 @app.get("/get-by-name")
 def get_item(name:str):
-    for item_id in inventory:
+    for item_id in inventory :
         if inventory[item_id]["name"] == name:
             return inventory[item_id]
     return {"DAta" : "Not found"}
