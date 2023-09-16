@@ -1,6 +1,9 @@
-endpounst is /home type things
-methods get , post , put , delete
-uvicorn app:app --reload   =  chalu karta hai and automatically refresh karte rehta hai when update is there in app
-import Path  helps to add more details , constraints
-fastapi baseModel is very smat=rt directly item ko set karsakta hai inventory mein just by seein thecname and comparing the aitem structure without defininh
-# we have to manually update the items as the it is an instance of BaseModel and not an already made dictionary
+# endpounst is /home type things
+# methods get , post , put , delete
+# uvicorn app:app --reload   =  chalu karta hai and automatically refresh karte rehta hai when update is there in app
+# import Path  helps to add more details , constraints
+# fastapi baseModel is very smat=rt directly item ko set karsakta hai inventory mein just by seein thecname and comparing the aitem structure without defininh
+# # we have to manually update the items as the it is an instance of BaseModel and not an already made 
+# HTTPException, status  is used to create status code when rror is occured
+# #   raise HTTPException(status_code=404, detail="Item Not found")
+#     # raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
