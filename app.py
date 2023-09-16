@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Path
+from fastapi import FastAPI, Path , Query
 from typing import Optional
 from pydantic import BaseModel
 app = FastAPI()
@@ -54,3 +54,10 @@ def update_item(item_id : int , item:UpdateItem):
     return inventory[item_id]
 # we have to manually update the items as the it is an instance of BaseModel and not an already made dictionary
 # so now while updating if we only send one value then it will update only that element value and will not require you to specify all other element values
+
+@app.delete('/delete-item')
+def delete_item(item_id :int = Query(...,gt=0, description="The item_id you want to delete")):
+    if item_id not in inventory:
+        return {"Error" : "Item does not exist"}
+    del inventory[item_id]
+    return {"Success" : "Item deleted Successfully"}
